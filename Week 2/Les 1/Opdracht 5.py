@@ -1,3 +1,4 @@
-lijst = (1, 2, 3, 4, 5 ,8, 10, 11)
-for lijst in range(2, 11, 2):
-    print(lijst)
+lst = [1,2,3,4,5,6,7,8,9]
+for num in lst:
+   if num%2 == 0:
+       print(num)
