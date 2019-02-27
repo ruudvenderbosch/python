@@ -16,7 +16,7 @@ def nieuwe_kluis():
         kluisnummers.remove(kluisnummer)
     code = input('wat wilt u als code?: ')
     infile = open('kluizen.txt', 'a')
-    infile.write(str( + 1) + ',' + code)
+    infile.write(str(kluisnummer + 1) + ';' + code)
     print('Kluisnummer {} met code {} is toegewezen.'.format(str(kluisnummer + 1), code))
     infile.close()
 
@@ -31,8 +31,8 @@ if keuze == 1:
     vrijekluizen = toon_aantal_kluizen_vrij()
     print(vrijekluizen)
 elif keuze == 2:
-    nieuwekluis = nieuwe_kluis()
-    print(nieuwekluis)
+    nieuwkluis = nieuwe_kluis()
+    print(nieuwkluis)
 elif keuze == 3:
     openkluis = kluis_openen()
     print(openkluis)
