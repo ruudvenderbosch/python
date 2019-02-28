@@ -14,10 +14,11 @@ def nieuwe_kluis():
         onderdelen = regel.split(';')
         kluisnummer = int(onderdelen [0])
         kluisnummers.remove(kluisnummer)
+    kluisnummer = kluisnummers[0]
     code = input('wat wilt u als code?: ')
     infile = open('kluizen.txt', 'a')
-    infile.write(str(kluisnummer + 1) + ';' + code)
-    print('Kluisnummer {} met code {} is toegewezen.'.format(str(kluisnummer + 1), code))
+    infile.write(str(kluisnummer) + ';' + code + str('\n'))
+    print('Kluisnummer {} met code {} is toegewezen.'.format(str(kluisnummer), code))
     infile.close()
 
 print('1: Ik wil weten hoeveel kluizen nog vrij zijn\n'
